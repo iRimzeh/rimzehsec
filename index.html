@@ -1,0 +1,152 @@
+<html>
+<head>
+    <body>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <meta name="author" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link href="assets/css/main.css" rel="stylesheet" />
+        <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="assets/css/vendor.css" rel="stylesheet" />
+        <link href="assets/css/theme_black_red.css" id="theme" rel="stylesheet" />
+        <link href="assets/css/custom.css" rel="stylesheet" />
+        <link href="assets/css/demo.css" rel="stylesheet" />
+        <link href="assets/favicon.ico" rel="shortcut icon" />
+        <script src="assets/js/vendor/jquery-2.1.4.min.js"></script>
+        <script src='assets/js/vendor/plugin.js'></script>
+        <script src='assets/js/variable.js'></script>
+        <script src='assets/js/main.js'></script>
+        <script src='assets/js/demo.js'></script>
+		<script src="assets/js/main.js"></script>
+		 <center>
+         <div style="font-family: 'Poiret One', regular;" class="animated fadeInUp"></div>
+         <font face="courier"></a>
+         <div style="font-family: 'Poiret One', regular;" class="animated fadeInUp">
+            <div id="time"> </div>
+         </div>
+         <div style="font-family: 'Poiret One', regular;" class="animated fadeInUp">
+            <div id="date"> </div>
+         </div>
+         <div style="font-family: 'Poiret One', regular;" class="animated fadeInUp"></div>
+         <div style="font-family: 'Poiret One', regular;" class="container">
+         </center>
+		 <div id="videoContainer" style="display:inline-block"></div>
+		 <b style="font-family: 'Poiret One', regular;" id="output" style="vertical-align:top"></b>
+			<script>
+				var video = document.currentScript.parentElement;
+				var videoContainer = document.getElementById('videoContainer'),
+					output = document.getElementById('output'),
+					nextVideo,
+					videoObjects =
+					[
+						document.createElement('video'),
+						document.createElement('video')
+					],
+					vidSources =
+					[
+						'assets/1.mp4',
+						'assets/2.mp4',
+						'assets/3.mp4',
+						'assets/4.mp4',
+						'assets/5.mp4'
+						//add new background videos easily
+					],
+					//picks random video from list above when website is loaded
+					nextActiveVideo = Math.floor((Math.random() * vidSources.length));
+				videoObjects[0].inx = 0; //sets index
+				videoObjects[1].inx = 1;
+				initVideoElement(videoObjects[0]);
+				initVideoElement(videoObjects[1]);
+				videoObjects[0].autoplay = true;
+				videoObjects[0].src = vidSources[nextActiveVideo];
+				videoContainer.appendChild(videoObjects[0]);
+				videoObjects[1].style.display = 'none';
+				videoContainer.appendChild(videoObjects[1]);
+				function initVideoElement(video)
+				{
+					video.playsinline = true;
+					video.muted = false;
+					video.preload = 'auto'; //don't set autoplay, because it deletes preload
+					video.onplaying = function(e)
+					{
+						//select next index. If is equal vidSources.length then it is 0
+						nextActiveVideo = ++nextActiveVideo % vidSources.length;
+						//replace the video elements against each other:
+						if(this.inx == 0)
+							nextVideo = videoObjects[1];
+						else
+							nextVideo = videoObjects[0];
+						nextVideo.src = vidSources[nextActiveVideo];
+						nextVideo.pause();
+					};
+					video.onended = function(e)
+					{
+						this.style.display = 'none';
+						nextVideo.style.display = 'block';
+						nextVideo.play();
+					};
+					video.volume = 0.35;
+				}
+			</script>
+        <div class="site-loader">
+            <p>loading...</p>
+        </div>
+        <div class="site-bg">
+            <div class="site-bg__overlay"></div>
+            <div class="site_countdown"></div>
+            <div class="site-bg__effect"></div>
+            <canvas class="site-bg__canvas"></canvas>
+        </div>
+        <div class="loading">
+            <div id="wrapper">
+                <div id="main">
+                    <header id="header">
+                        <h1><font size="14" class="unselectable" style="color:#bdbdbd";>r i m z e h s e c </font><font size="14" class="unselectable" style="color:#666666";>. d e v</font></h1>
+                        <h2><font size="4">iRimzeh#1337</font></h2>
+                        <nav>
+                            <div class="e" style="font-family: 'Poiret One', regular;">
+                                <p><font size="5"> <a target="_blank" href="https://instagram.com/s7rimzeh">Instagram</a> <a class="unselectable"> | </a> <a target="_blank" href="https://www.snapchat.com/add/exzrswift">Snapchat</a>  <a class="unselectable"> | </a> <a target="_blank" href="https://discord.gg/DcUTwfG">Discord Server</a>  <a class="unselectable"> | </a> <a target="_blank" href="https://irimzeh.selly.store/">Store</a></p>
+                            </div>
+                        </nav>
+						<center>
+							<div style="font-family: 'Poiret One', regular;" class="animated fadeInUp">
+								<p><font size="4">iRimzeh</font></p>
+							</div>
+						</center>
+                    </header>
+                </div>
+				<div style="font-family: 'Poiret One', regular;" id="fade"><p><font size="4"><p><font size="3">‎ ‎If you don't see the background video, enable sound and javascript in the site settings</font></p></div>
+            </div>
+        </div>
+        <script type='text/javascript'>
+            msg = "rimzehsec.dev";
+            msg = "⠀" + msg;
+            position = 0;
+            function scrolltitle() {
+                document.title = msg.substring(position, msg.length) + msg.substring(0, position);
+                position++;
+                if (position > msg.length) position = 0
+                window.setTimeout("scrolltitle()", 190);
+            }
+            scrolltitle();
+        </script>
+		<script>
+		setTimeout(function() { // start a delay
+		var fade = document.getElementById("fade"); // get required element
+		fade.style.opacity = 1; // set opacity for the element to 1
+		var timerId = setInterval(function() { // start interval loop
+			var opacity = fade.style.opacity; // get current opacity
+			if (opacity == 0) { // check if its 0 yet
+			clearInterval(timerId); // if so, exit from interval loop
+			} else {
+			fade.style.opacity = opacity - 0.1; // else remove 0.1 from opacity
+			}
+		}, 50); // run every 0.1 second
+		}, 7500); // wait to run after 5 seconds
+		</script>
+	<center><font size="2">This is the free demo result. For a full version of this website, please go to  <a href="https://www6.waybackmachinedownloader.com/website-downloader-online/scrape-all-files/">https://www6.waybackmachinedownloader.com/website-downloader-online/scrape-all-files/</a></font></center></body>
+</head>
+</html>
